@@ -1,0 +1,151 @@
+   
+    * {
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+    }
+
+    ul{
+        list-style: none;
+    }
+    
+    body {
+            background-image: url(./assets/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 100% auto;
+            background-color: rgb(29, 27, 27);
+        }
+    
+        body *{
+            font-family: 'inter', sans-serif;
+            line-height: 160%;
+            }
+
+        header {
+            padding-top: 32px;   
+        }
+        
+        header img {
+            width: 120px;
+            border-radius: 50%;     
+        }
+        
+        header div {
+            width: 120px;
+            margin: 32px auto;
+            background-image: linear-gradient(90deg,#833ab4 0%, #1ddcfd 50%, #fcb045 100%);
+            border-radius: 50%;
+            display: flex;
+            padding: 4px;
+            transition: transform .3s;
+        }
+
+        header div:hover {
+            transform: scale(1.1);
+        }
+        header div img {
+            width: 100%;
+            margin: auto  
+        }
+        /*animation header*/
+
+        header div {
+            animation: fromTop .7s .3s backwards;
+        }
+        
+        main {
+            max-width: 500px;
+            width: 90%;
+            margin: 32px auto;
+            display: grid;
+            gap: 24px;
+        }
+        /*animation*/
+        main section {
+            animation: toTop .7s backwards;
+        }
+
+        main section:nth-child(1){
+            animation-delay: 0;
+        }
+        main section:nth-child(2){
+            animation-delay: .4s;
+        }
+        main section:nth-child(3){
+            animation-delay: .7s;
+        }
+        section {
+            color: rgb(240, 248, 255);
+            padding-top: 4px;
+            border-radius: 10px;
+            background-image: linear-gradient(90deg,#833ab4 0%, #1ddcfd 50%, #fcb045 100%);
+        }
+
+        section h2{
+            letter-spacing: -0.47;
+        }
+
+        section p {
+            letter-spacing: -0.18;
+            color: rgb(184, 182, 179);
+        }
+
+        section div {
+            background-color: rgb(24, 26, 27);
+            padding: 32px;
+            padding-top: 24px;
+            border-radius: 8px;
+        }
+        section ul {
+            display: flex;
+            gap: 16px;    
+            margin-top: 24px;       
+            flex-wrap: wrap;
+        }
+        section ul li {
+            transition: transform .3s;
+        }
+        section ul li:hover {
+            transform: scale(1.1);
+        }
+        .games-list img {
+            border-radius: 8px;
+            width: 90px;
+        }
+
+        .stremers-list img {
+            border-radius: 50%;
+            width: 80px;
+            border: 1px solid #586463;
+        }
+
+        /* animation cod*/
+
+        @keyframes fromTop {
+            from{
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px)
+            }
+        }
+
+        @keyframes toTop {
+            
+            from{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px)
+            }
+            
+        }
+
+        
